@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atmos IQ</title>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Lottie Player for animated icons -->
+  <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="top">
+    <h1>☁️ WeatherX</h1>
+    <button id="themeToggle">🌙</button>
+  </div>
+
+  <input type="text" id="cityInput" placeholder="Enter city..." />
+
+  <div class="btns">
+    <button onclick="getWeather()">Search</button>
+    <button onclick="getLocationWeather()">📍 Use Location</button>
+  </div>
+
+  <h2 id="cityName"></h2>
+
+  <!-- Animated Icon -->
+  <lottie-player id="weatherIcon"
+    background="transparent"
+    speed="1"
+    style="width: 120px; height: 120px;"
+    loop autoplay>
+  </lottie-player>
+
+  <h1 class="temp" id="temp"></h1>
+
+  <div class="details">
+    <p>💨 Wind: <span id="wind"></span></p>
+    <p>💧 Humidity: <span id="humidity"></span></p>
+    <p>🌡️ Feels like: <span id="feels"></span></p>
+  </div>
+
+  <div id="forecast" class="forecast"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
